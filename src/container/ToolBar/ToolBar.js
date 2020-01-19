@@ -17,7 +17,7 @@ class ToolBar extends Component {
         return (
             <div className={"toolbarWrapper"}>
                 <div className={"title"}>
-                    {"title text"}
+                    {currentCategory.name ? `${currentCategory.name}` : "category list"}
                 </div>
                 <div className={"actionBtnsWrapper"}>
                     {
