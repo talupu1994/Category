@@ -16,18 +16,21 @@ export default function (state = initState,action){
     switch(action.type){
         case ADD_NEW_CATEGORY:{
             const {categoryList = []} = state;
-            if(categoryList.length > 0){
+            let newArr = (categoryList || []);
+            console.log(newArr);
+            if(categoryList && categoryList.length > 0){
                 const maxId = Math.max.apply(Math, categoryList.map((category) => { return category.id; }));
                 action.payload.id = maxId + 1;
             }
             else{
                 action.payload.id = 1;
             }
-            categoryList.push(action.payload);
-            localStorage.setItem("categotyList",JSON.stringify(categoryList));
+
+            newArr.push(action.payload);
+            localStorage.setItem("categotyList",JSON.stringify(newArr));
             return {
                 ...state,
-                categoryList:[...categoryList]
+                categoryList:[...newArr]
             };
         }
         case DELETE_CATEGORY:{
@@ -69,7 +72,7 @@ export default function (state = initState,action){
             }
         }
         case SET_CATEGORY_LIST:{
-            localStorage.setItem("categotyList",(JSON.stringify(action.payload) || []));
+            localStorage.setItem("categotyList",(JSON.stringify(action.payload || [])));
             return{
                 ...state,
                 categoryList:action.payload

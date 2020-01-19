@@ -40,6 +40,7 @@ class CategoryForm extends Component{
             }
             case ACTION.edit:{
                 this.props.saveCategory({name:currentValue,id:currentCategory.id});
+                break;
             }
         }
         
@@ -48,7 +49,6 @@ class CategoryForm extends Component{
     render(){
         const {currentValue} = this.state;
         const {actionFlag,currentCategory} = this.props;
-        console.log(currentCategory);
         if(actionFlag === ACTION.none) return "";
         return(
             <div className={"formWrapper"}>
