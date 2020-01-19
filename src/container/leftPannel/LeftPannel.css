@@ -1,0 +1,25 @@
+.leftPannelWrapper{
+    padding: 0 10px 0 15px;
+    width: 150px;
+    height: 100vh;
+    overflow: auto;
+    background-color: #dedede;
+    -webkit-box-shadow: 5px 0px 10px 0px rgba(122,113,122,0.44);
+    -moz-box-shadow: 5px 0px 10px 0px rgba(122,113,122,0.44);
+    box-shadow: 5px 0px 10px 0px rgba(122,113,122,0.44);
+}
+
+.leftPannelWrapper .categotyItem{
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.leftPannelWrapper .categotyItem:hover{
+    background: rgba(255, 255, 255, 0.397);
+}
+
+.categotyItem.active{
+    font-weight: 500;
+}

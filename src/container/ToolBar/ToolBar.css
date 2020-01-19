@@ -1,0 +1,24 @@
+.toolbarWrapper{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+    background-color: #dedede;
+}
+
+.toolbarWrapper .title{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.toolbarWrapper .actionBtnsWrapper{
+    display: flex;
+}
+
+.toolbarWrapper .actionBtnsWrapper .actionBtn{
+    margin-left: 5px;
+    cursor: pointer;
+}

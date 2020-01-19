@@ -1,0 +1,48 @@
+input{
+    outline: none;
+}
+.formWrapper{
+    width: 100%;
+    padding-left: 20px;
+}
+
+.formWrapper .titleWrapper{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.formWrapper .inputsWrapper{
+    margin-top: 10px;
+}
+
+.formWrapper .inputsWrapper .row{
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+    align-items: center;
+}
+
+.formWrapper .inputsWrapper .row label{
+    flex: 0 0 80px;
+}
+.formWrapper .inputsWrapper .row input{
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.formWrapper .inputsWrapper .saveBtn{
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    background: #dedede;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: all 400ms;
+}
+
+.formWrapper .inputsWrapper .saveBtn:hover{
+    background-color: green;
+    color: #fff;
+}
